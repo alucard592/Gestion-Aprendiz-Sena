@@ -6,7 +6,7 @@ public class Equipo {
     private String categoria;
     private boolean disponible;
 
-    // CONSTRUCTOR: Aplica la regla de "disponible = true" al crear
+    // Contructor
     public Equipo(String codigo, String nombre, String categoria) {
         if (codigo == null || codigo.trim().isEmpty()) {
             throw new IllegalArgumentException("El código no puede estar vacío");
@@ -14,14 +14,14 @@ public class Equipo {
         this.codigo = codigo;
         this.nombre = nombre;
         this.categoria = categoria;
-        this.disponible = true; // Parámetro inicial por defecto
+        this.disponible = true; // Parmetro inicial 
     }
 
-    // Métodos de comportamiento
+    // comportamiento
     public void marcarComoPrestado() { this.disponible = false; }
     public void marcarComoDevuelto() { this.disponible = true; }
 
-    // Getters necesarios para la Tarea 2
+    // getter
     public String getCodigo() { return codigo; }
     public boolean isDisponible() { return disponible; }
     
